@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesta Estratégica para ITva Technologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-button.active {
+            border-color: #4F46E5;
+            color: #4F46E5;
+            background-color: #EEF2FF;
+        }
+        .kpi-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .funnel-stage {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .funnel-stage:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-8">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-500">Propuesta de Transformación Digital</h1>
+            <p class="text-xl text-gray-600 mt-4">Un Plan de Crecimiento Acelerado para ITva Technologies</p>
+        </header>
+
+        <div class="bg-white shadow-2xl rounded-2xl p-6 sm:p-10">
+
+            <div class="tabs-container mb-10 border-b border-gray-200">
+                <div class="tabs flex flex-wrap -mb-px">
+                    <button class="tab-button active text-lg font-semibold p-4 rounded-t-lg border-b-2 border-transparent" onclick="openTab(event, 'diagnostico')">Diagnóstico</button>
+                    <button class="tab-button text-lg font-semibold p-4 rounded-t-lg border-b-2 border-transparent" onclick="openTab(event, 'auditoria')">Auditoría SEO/UX</button>
+                    <button class="tab-button text-lg font-semibold p-4 rounded-t-lg border-b-2 border-transparent" onclick="openTab(event, 'prototipo')">El Nuevo Embudo</button>
+                    <button class="tab-button text-lg font-semibold p-4 rounded-t-lg border-b-2 border-transparent" onclick="openTab(event, 'plan')">Plan de Acción</button>
+                    <button class="tab-button text-lg font-semibold p-4 rounded-t-lg border-b-2 border-transparent" onclick="openTab(event, 'competencia')">Análisis Competitivo</button>
+                    <button class="tab-button text-lg font-semibold p-4 rounded-t-lg border-b-2 border-transparent" onclick="openTab(event, 'propuesta')">Propuesta</button>
+                </div>
+            </div>
+
+            <!-- Diagnostico General -->
+            <div id="diagnostico" class="tab-content active">
+                <h2 class="text-4xl font-bold mb-8 text-indigo-700">El Punto de Partida</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-red-50 p-6 rounded-xl border-l-4 border-red-500">
+                        <h3 class="text-2xl font-semibold mb-4 text-red-600"><i class="fas fa-exclamation-circle mr-2"></i>Debilidades Críticas</h3>
+                        <ul class="list-disc list-inside space-y-3">
+                            <li><b>Crecimiento Estancado:</b> Dependencia total de referidos, sin un motor predecible de nuevos clientes.</li>
+                            <li><b>Inversión Desperdiciada:</b> $3,000 gastados en Google Ads sin un embudo de conversión ni seguimiento adecuados.</li>
+                            <li><b>Invisibilidad Online:</b> Ausencia de una estrategia de backlinks, resultando en una autoridad de dominio casi nula.</li>
+                            <li><b>Oportunidades de Nicho Perdidas:</b> El SEO y el contenido son genéricos, no conectan con las necesidades de abogados, contadores, etc.</li>
+                            <li><b>Fugas de Conversión:</b> La web actual no está diseñada para guiar al usuario hacia la acción.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-600"><i class="fas fa-rocket mr-2"></i>Oportunidades Inmediatas</h3>
+                        <ul class="list-disc list-inside space-y-3">
+                            <li><b>Mercado Objetivo Claro:</b> Un público B2B de alto valor, perfecto para estrategias de marketing de precisión.</li>
+                            <li><b>Oferta Irresistible:</b> La "evaluación gratuita" es un lead magnet extremadamente potente si se presenta correctamente.</li>
+                            <li><b>Base Sólida:</b> El contenido y los testimonios B2B existentes son un excelente material de partida.</li>
+                            <li><b>Capacidad Operativa:</b> Disponibilidad para absorber nuevos clientes de inmediato.</li>
+                            <li><b>Potencial de Liderazgo:</b> Oportunidad de convertirse en el proveedor de TI de referencia para nichos específicos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auditoria Profunda -->
+            <div id="auditoria" class="tab-content">
+                <h2 class="text-4xl font-bold mb-8 text-indigo-700">Auditoría 360°: El "Porqué" de los Problemas</h2>
+                <p class="text-center text-gray-600 mb-10 text-lg">Un análisis profundo revela por qué los esfuerzos actuales no generan resultados, a pesar de tener una base técnica inicial decente.</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Columna Izquierda: Técnico y On-Page -->
+                    <div class="space-y-8">
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fas fa-cogs mr-2 text-blue-500"></i>Análisis SEO Técnico</h3>
+                            <p class="mb-4">El sitio tiene un score de SEO técnico de 100/100, lo cual es excelente. Sin embargo, esto solo cubre lo más básico. Faltan elementos avanzados clave:</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><b>Rendimiento Crítico (48/100):</b> La velocidad de carga es el mayor problema técnico, con un LCP de 13.4s que anula cualquier otro esfuerzo.</li>
+                                <li><b>Sin Datos Estructurados (Schema):</b> Se pierde la oportunidad de que Google entienda mejor el contenido y lo muestre con fragmentos enriquecidos.</li>
+                                <li><b>Sitemap Básico:</b> El mapa del sitio actual no comunica eficazmente la jerarquía de contenidos a los motores de búsqueda.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fas fa-file-signature mr-2 text-green-500"></i>Análisis SEO On-Page</h3>
+                            <p class="mb-4">El contenido es genérico. No basta con decir "servicios de TI"; hay que hablar el idioma del cliente.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><b>Intención de Búsqueda Ignorada:</b> No se responde a preguntas como "¿Qué normativas de ciberseguridad debe cumplir mi firma de abogados?".</li>
+                                <li><b>Investigación de Keywords Superficial:</b> No se atacan palabras clave de "cola larga" y alta intención de compra para cada nicho.</li>
+                                <li><b>Enlazado Interno Inexistente:</b> No se crea una red de enlaces internos que guíe al usuario y distribuya la autoridad de la página.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Columna Derecha: Off-Page y UX -->
+                    <div class="space-y-8">
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fas fa-link mr-2 text-red-500"></i>Análisis SEO Off-Page</h3>
+                            <p class="mb-4">La autoridad de un dominio se construye fuera del sitio. Actualmente, ITva es un desconocido para Google en este aspecto.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><b>Perfil de Backlinks Nulo:</b> No existe una estrategia para conseguir enlaces de calidad desde otros sitios web, el factor más importante para el ranking.</li>
+                                <li><b>Análisis Competitivo Cero:</b> No se está analizando de dónde obtienen sus enlaces los competidores para replicar y superar su estrategia.</li>
+                                <li><b>Menciones de Marca Desaprovechadas:</b> No se monitoriza ni se fomenta la presencia de la marca en directorios y webs del sector.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-50 p-6 rounded-xl shadow-lg">
+                            <h3 class="text-2xl font-semibold mb-4 text-gray-800"><i class="fas fa-user-slash mr-2 text-yellow-500"></i>Análisis de Conversión (UX/CRO)</h3>
+                            <p class="mb-4">El diseño actual crea barreras que impiden activamente que un visitante se convierta en cliente.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><b>Viaje del Usuario Roto:</b> No hay un camino claro. Se obliga al usuario a pensar y buscar, en lugar de guiarlo hacia la solución.</li>
+                                <li><b>Propuesta de Valor Genérica:</b> Un abogado no ve "seguridad para mi firma", ve "servicios de TI". El mensaje no conecta.</li>
+                                <li><b>Llamadas a la Acción Débiles:</b> Un "Contáctenos" no tiene el mismo poder que "Obtén tu Auditoría de Seguridad para Contadores".</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prototipo y Funnel -->
+            <div id="prototipo" class="tab-content">
+                <h2 class="text-4xl font-bold mb-4 text-indigo-700">Visualizando el Éxito: El Nuevo Embudo de Clientes</h2>
+                <p class="text-center text-gray-600 mb-12 text-lg">Transformaremos el sitio de una simple tarjeta de presentación a una máquina de generación de prospectos. Así es como se ve el viaje del cliente ideal.</p>
+                
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4">
+                    <!-- Stage 1: Atracción -->
+                    <div class="funnel-stage text-center p-6 bg-white rounded-2xl shadow-xl w-full md:w-1/4 border-t-8 border-blue-500">
+                        <i class="fas fa-search-location text-5xl text-blue-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">1. ATRACCIÓN</h3>
+                        <p class="text-gray-600 font-semibold mb-3">Tráfico Cualificado</p>
+                        <p class="text-sm">Un abogado busca "servicios TI para despachos" y encuentra un anuncio de Google o un post de LinkedIn que le habla directamente de sus problemas.</p>
+                    </div>
+                    <div class="hidden md:block"><i class="fas fa-long-arrow-alt-right text-4xl text-gray-300"></i></div>
+                    <div class="block md:hidden"><i class="fas fa-long-arrow-alt-down text-4xl text-gray-300"></i></div>
+
+                    <!-- Stage 2: Interés -->
+                    <div class="funnel-stage text-center p-6 bg-white rounded-2xl shadow-xl w-full md:w-1/4 border-t-8 border-green-500">
+                        <i class="fas fa-file-alt text-5xl text-green-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">2. INTERÉS</h3>
+                        <p class="text-gray-600 font-semibold mb-3">Landing Page de Nicho</p>
+                        <p class="text-sm">Aterriza en una página diseñada 100% para abogados, con testimonios de otras firmas y que aborda sus puntos de dolor (seguridad, cumplimiento).</p>
+                    </div>
+                    <div class="hidden md:block"><i class="fas fa-long-arrow-alt-right text-4xl text-gray-300"></i></div>
+                    <div class="block md:hidden"><i class="fas fa-long-arrow-alt-down text-4xl text-gray-300"></i></div>
+
+                    <!-- Stage 3: Decisión -->
+                    <div class="funnel-stage text-center p-6 bg-white rounded-2xl shadow-xl w-full md:w-1/4 border-t-8 border-yellow-500">
+                        <i class="fas fa-calendar-check text-5xl text-yellow-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">3. DECISIÓN</h3>
+                        <p class="text-gray-600 font-semibold mb-3">Oferta Irresistible</p>
+                        <p class="text-sm">Se le presenta la "Evaluación de Seguridad Gratuita" como el paso lógico para resolver sus problemas. El formulario es simple y directo.</p>
+                    </div>
+                    <div class="hidden md:block"><i class="fas fa-long-arrow-alt-right text-4xl text-gray-300"></i></div>
+                    <div class="block md:hidden"><i class="fas fa-long-arrow-alt-down text-4xl text-gray-300"></i></div>
+
+                    <!-- Stage 4: Acción -->
+                    <div class="funnel-stage text-center p-6 bg-white rounded-2xl shadow-xl w-full md:w-1/4 border-t-8 border-purple-500">
+                        <i class="fas fa-handshake text-5xl text-purple-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold mb-2">4. ACCIÓN</h3>
+                        <p class="text-gray-600 font-semibold mb-3">Lead Cualificado</p>
+                        <p class="text-sm">ITva recibe los datos de un prospecto que encaja perfectamente en su público objetivo, listo para ser contactado y cerrado como cliente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plan de Accion -->
+            <div id="plan" class="tab-content">
+                <h2 class="text-4xl font-bold mb-8 text-indigo-700">Hoja de Ruta: Del Plan a los Resultados</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-orange-50 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold mb-4 text-orange-600">Fase 1: Cimentación (Meses 0-3)</h3>
+                        <ul class="list-decimal list-inside space-y-3">
+                            <li><b>Optimización de Rendimiento Web:</b> Atacar el score de 48/100 para crear una experiencia de usuario fluida.</li>
+                            <li><b>Investigación de Palabras Clave por Nicho:</b> Definir el mapa de ataque para cada vertical de cliente.</li>
+                            <li><b>Creación de 2 Landing Pages de Nicho:</b> Lanzar las primeras páginas de conversión para Abogados y Contadores.</li>
+                            <li><b>Campañas de Google Ads 2.0:</b> Lanzar campañas hiper-segmentadas dirigidas a las nuevas landing pages.</li>
+                            <li><b>Estrategia de Contenidos en LinkedIn:</b> Iniciar el posicionamiento de autoridad con 2 publicaciones semanales.</li>
+                            <li><b>Configuración Avanzada de Analytics:</b> Implementar seguimiento de conversiones y embudos.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-teal-50 p-8 rounded-xl">
+                        <h3 class="text-2xl font-semibold mb-4 text-teal-600">Fase 2: Expansión y Autoridad (Meses 4-6)</h3>
+                        <ul class="list-decimal list-inside space-y-3">
+                            <li><b>Campaña de Construcción de Backlinks:</b> Empezar a construir la autoridad de dominio de forma activa.</li>
+                            <li><b>Expansión de Contenidos:</b> Añadir un blog al sitio y aumentar la frecuencia en LinkedIn.</li>
+                            <li><b>Optimización de Tasa de Conversión (CRO):</b> Analizar mapas de calor y grabaciones de usuarios para mejorar las landing pages.</li>
+                            <li><b>Creación de 2 Landing Pages Adicionales:</b> Atacar los nichos de Consultores y Brokers de Bienes Raíces.</li>
+                            <li><b>Reportes de ROI y Estrategia:</b> Presentar informes mensuales enfocados en el coste por lead y el retorno de la inversión.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analisis Competitivo -->
+            <div id="competencia" class="tab-content">
+                <h2 class="text-4xl font-bold mb-8 text-indigo-700">Análisis Competitivo de Precios</h2>
+                <p class="text-center text-gray-600 mb-10 text-lg">Un vistazo a las estructuras de precios de agencias destacadas en el mercado. Esto nos ayuda a posicionar nuestra oferta de manera competitiva y a entender el valor que percibe el cliente.</p>
+                <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Agencia</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Servicio(s) Clave</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Modelo de Precios / Costo</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">On the Map Marketing</td>
+                                <td class="px-6 py-4 whitespace-nowrap">SEO</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$1,500 – $15,000+ por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Gestión de PPC / Anuncios en Redes Sociales</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$1,000 o 10% del presupuesto publicitario (lo que sea mayor)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Diseño Web</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$5,000 – $15,000+ por proyecto</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Redacción de Contenido</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Desde $150 por 500 palabras</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Nomadic Advertising</td>
+                                <td class="px-6 py-4 whitespace-nowrap">SEO</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Desde $2,000 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Gestión de Google Ads / Facebook Ads</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$1,000 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Paquete (SEO + Google Ads)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$3,000 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Diseño y Desarrollo Web</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$999 – $3,999 por proyecto</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Seoteric</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Gestión de Google Ads (Paquete Startup)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$500/mes o 15% del gasto (lo que sea mayor) + $1,000 de configuración</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Gestión de Google Ads (Paquete Crecimiento)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$1,000/mes o 15% del gasto (lo que sea mayor) + $1,500 de configuración</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Gestión de Google Ads (Paquete SMB)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$2,500/mes o 15% del gasto (lo que sea mayor) + $2,500 de configuración</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Doc Digital SEM</td>
+                                <td class="px-6 py-4 whitespace-nowrap">SEO (Pequeñas empresas)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$600 – $1,000 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">SEO (Medianas empresas)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$1,000 – $2,500 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Diseño de Landing Page</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Desde $750 por proyecto</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Diseño de Sitio Web (5 páginas)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Desde $1,200 por proyecto</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Sofla Web</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Diseño y Desarrollo Web</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$150/hora (Mínimo de proyecto de $6,000 para nuevos clientes)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">SEO y SEM</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$90 - $150/hora (Mínimo de 10 horas al mes)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Effective Marketing Design</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Gestión de Google Ads (Paquete Básico)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$390 de configuración, luego $90 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900"></td>
+                                <td class="px-6 py-4 whitespace-nowrap">Gestión de Google Ads (Paquete Emprendedor)</td>
+                                <td class="px-6 py-4 whitespace-nowrap">$590 de configuración, luego $180 por mes</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Digital Silk</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Marketing Digital</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Retainer mínimo de $5,000 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">neuelane</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Publicidad</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Retainer mínimo de $2,000 por mes</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Alkemy</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Marketing Digital, Diseño Web, Desarrollo de Software</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Retainer mínimo de $500 por mes</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap font-medium text-gray-900">Auctus Digital Marketing</td>
+                                <td class="px-6 py-4 whitespace-nowrap">SEO, Diseño Web, Redes Sociales</td>
+                                <td class="px-6 py-4 whitespace-nowrap">Retainer mínimo de $500 por mes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Propuesta -->
+            <div id="propuesta" class="tab-content">
+                <h2 class="text-4xl font-bold mb-8 text-indigo-700">🚀 Propuesta Formal: Fase 1 – Activación Bootstrap SEO-Driven para ITva</h2>
+                <p class="text-center text-gray-600 mb-10 text-lg">**Plan Estratégico con Blog Mensual y Múltiples Bonus Incluidos**</p>
+                
+                <div class="prose max-w-none">
+                    <p><strong>Fecha:</strong> 31 de julio de 2025<br>
+                    <strong>Dirigido a:</strong> ITva<br>
+                    <strong>Preparado por:</strong> Flowfy AI, Agencia de Marketing Digital e Inteligencia Artificial</p>
+
+                    <h3>🎯 Objetivo Principal</h3>
+                    <p>Establecer una infraestructura digital eficiente y de bajo costo para que ITva valide su propuesta de valor en un micro-nicho específico (ej. "Soluciones IT para abogados de familia en [ciudad objetivo]") durante los primeros 6 meses.</p>
+                    <p>Nuestra estrategia combina SEO on-page optimizado, blog mensual, landing page de alta conversión, campañas de búsqueda hiper focalizadas, analítica avanzada y reuniones mensuales estratégicas.</p>
+
+                    <h3>📋 Alcance Completo de la Fase 1 (0-6 meses)</h3>
+
+                    <h4>1. 🎨 Landing Page de Micro-Nicho Optimizada</h4>
+                    <ul>
+                        <li>Diseño, redacción y desarrollo completo de landing page enfocada en tu micro-nicho</li>
+                        <li>Optimización para conversión con CTAs estratégicos y testimoniales</li>
+                        <li>Diseño 100% responsive y mobile-first</li>
+                        <li><em>ITva proporcionará material gráfico o visual necesario (logotipos, imágenes de marca)</em></li>
+                    </ul>
+
+                    <h4>2. 📈 SEO On-Page Avanzado</h4>
+                    <p><strong>Investigación y Optimización:</strong></p>
+                    <ul>
+                        <li>Análisis profundo de palabras clave long-tail de baja competencia</li>
+                        <li>Optimización técnica de landing page y homepage actual</li>
+                        <li>Estructura semántica completa (H1, H2, meta descripciones, schema markup)</li>
+                        <li>Sitemap XML y robots.txt optimizados</li>
+                        <li>Compresión de imágenes y mejoras de velocidad de carga</li>
+                        <li>Envío de sitemap a motores de búsqueda</li>
+                    </ul>
+
+                    <h4>3. 💰 Campaña de Búsqueda Hiper Focalizada (Google Ads)</h4>
+                    <ul>
+                        <li>Configuración estratégica con segmentación avanzada</li>
+                        <li>A/B testing estructurado: 4 variaciones de anuncios</li>
+                        <li>Retargeting inteligente en display network</li>
+                        <li><strong>Sin límites en la creación de campañas</strong></li>
+                        <li><em>Presupuesto recomendado: $800/mes (sin comisión de agencia)</em></li>
+                    </ul>
+
+                    <h4>4. 🔄 Embudo de Leads Automatizado</h4>
+                    <ul>
+                        <li>Formularios optimizados con diseño UX/UI profesional</li>
+                        <li>Segmentación inteligente de leads</li>
+                        <li>Exportación automática a base de datos (Google Sheets, NocoDB, Airtable, etc. - según preferencia del cliente)</li>
+                        <li>Documento con recomendaciones básicas para seguimiento de leads</li>
+                    </ul>
+
+                    <h4>5. 📊 Analítica y Monitoreo Avanzado</h4>
+                    <ul>
+                        <li>Configuración completa de Google Analytics 4 y Google Tag Manager</li>
+                        <li>Tracking de conversiones conectado a base de datos elegida</li>
+                        <li>Análisis de datos con IA para identificar patrones</li>
+                        <li><strong>Reportes mensuales ejecutivos</strong> con métricas clave y recomendaciones</li>
+                    </ul>
+
+                    <h4>6. 🤝 Reuniones Estratégicas Mensuales</h4>
+                    <ul>
+                        <li>Sesiones de 1 hora cada mes divididas en sesiones quincenales</li>
+                        <li>Revisión detallada de resultados y KPIs</li>
+                        <li>Planificación estratégica para optimizaciones</li>
+                        <li>Roadmap para crecimiento futuro</li>
+                    </ul>
+
+                    <h3>🎁 <strong>BONUS INCLUIDOS SIN COSTO ADICIONAL</strong></h3>
+
+                    <h4>✅ <strong>BONUS #1: Análisis Estratégico de Competencia + LinkedIn</strong></h4>
+                    <ul>
+                        <li>Análisis completo de competencia en el mercado objetivo</li>
+                        <li>Identificación de oportunidades y gaps competitivos</li>
+                        <li>Optimización estratégica del perfil corporativo de LinkedIn</li>
+                        <li>Adaptación de estrategias de marketing basadas en insights competitivos</li>
+                    </ul>
+
+                    <h4>✅ <strong>BONUS #2: Hosting Gratuito</strong></h4>
+                    <ul>
+                        <li>Hosting profesional incluido por 1 año completo</li>
+                        <li>Soporte técnico incluido</li>
+                    </ul>
+
+                    <h4>✅ <strong>BONUS #3: Tema Premium</strong></h4>
+                    <ul>
+                        <li>Constructor/maquetador con licencia original de por vida</li>
+                        <li>Actualizaciones y soporte incluidas</li>
+                    </ul>
+
+                    <h4>✅ <strong>BONUS #4: Google My Business</strong></h4>
+                    <ul>
+                        <li>Optimización completa de perfil de Google My Business</li>
+                        <li>Configuración para SEO local</li>
+                    </ul>
+
+                    <h4>✅ <strong>BONUS #5: Flujo de Leads</strong></h4>
+                    <ul>
+                        <li>Sistema completo de captura y entrega de prospectos</li>
+                        <li>Integración con herramientas de ITva</li>
+                    </ul>
+
+                    <h3>📅 Cronograma de Implementación</h3>
+                    <p><strong>Mes 1:</strong> Setup completo - Investigación, desarrollo de landing page, configuración SEO, Google Ads y entrega de bonus</p>
+                    <p><strong>Meses 2-3:</strong> Lanzamiento de campañas, optimización A/B testing, primera reunión estratégica</p>
+                    <p><strong>Meses 4-6:</strong> Optimización continua, ajustes SEO, reuniones mensuales y preparación para Fase 2</p>
+
+                    <h3>💎 <strong>Inversión Transparente - Smart Pricing Bootstrap</strong></h3>
+
+                    <h4>🔧 <strong>Setup Inicial Único</strong></h4>
+                    <p><strong>Investigación + Desarrollo + Configuración Completa</strong></p>
+                    <ul>
+                        <li>Incluye todos los bonus mencionados</li>
+                        <li>Landing page + SEO + Google Ads + Analytics</li>
+                        <li><strong>Inversión: $3,000 USD</strong></li>
+                    </ul>
+
+                    <h4>🔄 <strong>Retainer Mensual (6 meses)</strong></h4>
+                    <p><strong>Gestión Completa + Optimización Continua</strong></p>
+                    <ul>
+                        <li>Gestión de ads + SEO + Reportes mensuales</li>
+                        <li>A/B testing + Análisis + Reuniones estratégicas</li>
+                        <li><strong>Inversión: $500/mes</strong> ($3,000 total por 6 meses)</li>
+                    </ul>
+
+                    <h4>📢 <strong>Presupuesto de Publicidad</strong></h4>
+                    <p><strong>Google Ads (Directo, sin comisiones)</strong></p>
+                    <ul>
+                        <li><strong>Recomendado: $800/mes</strong> ($4,800 total por 6 meses)</li>
+                        <li><strong>100% de tu presupuesto va a publicidad</strong></li>
+                    </ul>
+
+                    <h3>🏆 Beneficios Clave para ITva</h3>
+                    <ul>
+                        <li>✅ <strong>Infraestructura digital completa</strong> con landing page de alta conversión</li>
+                        <li>✅ <strong>SEO profesional optimizado</strong> para posicionamiento orgánico</li>
+                        <li>✅ <strong>Campañas optimizadas</strong> con retargeting y testing continuo</li>
+                        <li>✅ <strong>Analítica avanzada</strong> con reportes accionables</li>
+                        <li>✅ <strong>5 BONUS de alto valor</strong> incluidos sin costo adicional</li>
+                        <li>✅ <strong>Presupuesto transparente</strong> sin comisiones ocultas</li>
+                        <li>✅ <strong>Enfoque en resultados</strong> sin escatimar esfuerzos</li>
+                    </ul>
+
+                    <h3>🔮 <strong>Fase 2: Escalamiento con IA (Post-6 meses)</strong></h3>
+                    <p>Para maximizar resultados, recomendamos implementar:</p>
+
+                    <h4>🤖 <strong>Chatbot Conversacional</strong></h4>
+                    <ul>
+                        <li>Respuestas automáticas 24/7</li>
+                        <li>Captura de leads inteligente</li>
+                        <li>Integración con sistemas de ITva</li>
+                    </ul>
+
+                    <h4>🧠 <strong>Agente de IA Avanzado</strong> (Opcional)</h4>
+                    <ul>
+                        <li>Procesamiento de lenguaje natural</li>
+                        <li>Recomendaciones personalizadas</li>
+                        <li>Analytics predictivos</li>
+                    </ul>
+                    <p><strong>Beneficios esperados:</strong> +10-20% en tasa de conversión</p>
+
+                    <h3>⚠️ <strong>Consideraciones Importantes</strong></h3>
+
+                    <p><strong>Lo que INCLUIMOS:</strong></p>
+                    <ul>
+                        <li>Todo lo mencionado anteriormente + 6 bonus</li>
+                        <li>Soporte técnico completo</li>
+                        <li>Reuniones estratégicas mensuales</li>
+                        <li>Reportes ejecutivos detallados</li>
+                    </ul>
+
+                    <p><strong>Lo que necesitamos de ITva:</strong></p>
+                    <ul>
+                        <li>Material gráfico y contenido de la empresa</li>
+                        <li>Información sobre servicios y propuesta de valor</li>
+                        <li>Retroalimentación en reuniones mensuales</li>
+                    </ul>
+
+                    <p><strong>Servicios adicionales disponibles:</strong></p>
+                    <ul>
+                        <li>Redes sociales (TikTok, Facebook, Instagram) - Costo adicional</li>
+                        <li>Gestión de CRM - No incluido (solo entregamos leads)</li>
+                        <li>Email marketing avanzado - Disponible en Fase 2</li>
+                    </ul>
+
+                    <h3>🎯 <strong>Nuestra Promesa</strong></h3>
+                    <blockquote>
+                        <p><em>"Nos enfocamos en resultados y no escatimamos esfuerzos. Tu éxito es nuestro éxito."</em></p>
+                    </blockquote>
+                    <p><strong>¿Listo para activar tu crecimiento digital?</strong></p>
+                </div>
+            </div>
+
+        </div>
+
+        <footer class="text-center mt-16 mb-8">
+            <p class="text-gray-600">Esta propuesta es el mapa para convertir a ITva Technologies en un líder digital en su sector.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function openTab(event, tabName) {
+            let i, tabcontent, tabbuttons;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove('active');
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add('active');
+        }
+        // Set default tab
+        document.getElementById('diagnostico').style.display = 'block';
+    </script>
+
+</body>
+</html>
